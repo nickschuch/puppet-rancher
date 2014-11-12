@@ -36,4 +36,4 @@ We require the following Puppet modules.
 
 ## Thanks
 
-A big thanks goes out to the authors of both the contributors of the required Puppet modules and the Rancher team.
+A big thanks goes out to the contributors of the required Puppet modules and also the Rancher team.
