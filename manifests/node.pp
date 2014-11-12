@@ -1,6 +1,6 @@
 # Register Docker Node.
 
-define rancher::node (
+class rancher::node (
   $management = undef,
 ) {
 
