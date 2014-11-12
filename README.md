@@ -26,3 +26,14 @@ rancher::node { 'example_node':
   management => 'localhost',
 }
 ```
+
+## Requirements
+
+We require the following Puppet modules.
+
+* https://forge.puppetlabs.com/garethr/docker
+* https://forge.puppetlabs.com/puppetlabs/stdlib
+
+## Thanks
+
+A big thanks goes out to the authors of both the contributors of the required Puppet modules and the Rancher team.
