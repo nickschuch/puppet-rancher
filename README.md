@@ -7,6 +7,10 @@ A manifest with the goal of aiding setup of the Rancher projects.
 
 https://github.com/rancherio/rancher
 
+## Demo manifest
+
+https://github.com/nickschuch/puppet-rancher-demo
+
 ## Usage
 
 Management node
