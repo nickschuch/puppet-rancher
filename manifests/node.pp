@@ -10,7 +10,6 @@ class rancher::node (
     image         => 'rancher/agent',
     command       => "http://${management}:8080",
     volumes       => '/var/run/docker.sock:/var/run/docker.sock',
-    pull_on_start => true,
   }
 
 }
