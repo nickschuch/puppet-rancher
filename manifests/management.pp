@@ -6,7 +6,7 @@ class rancher::management {
 
   docker::run { 'rancher_server':
     image   => 'rancher/server',
-    expose  => [ '8080:8080' ],
+    ports   => [ '8080:8080' ],
     require => Docker::Image['rancher/server'],
   }
 
