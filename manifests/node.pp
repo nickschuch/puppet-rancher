@@ -4,9 +4,11 @@ class rancher::node (
   $management = undef,
 ) {
 
-  validate_string($management) 
+  validate_string($management)
 
-  docker::image { 'rancher/agent': }
+  docker::image { 'rancher/agent':
+    require => Package['docker'],
+  }
 
   docker::run { 'rancher_node':
     image   => 'rancher/agent',
@@ -16,4 +18,3 @@ class rancher::node (
   }
 
 }
-
