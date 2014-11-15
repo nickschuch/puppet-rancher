@@ -1,0 +1,12 @@
+---
+language: ruby
+rvm:
+  - 2.1.0
+script:
+  - bundle install
+  # Coding standards.
+  - touch /tmp/lint.txt
+  - for manifest in $(find manifests -name "*.pp"); do echo "Checking ${manifest}"; bundle exec puppet-lint --no-80chars-check --fail-on-warnings --no-autoloader_layout-check --error-level=all "${manifest}" | tee -a /tmp/lint.txt; done
+  - if [ $(cat /tmp/lint.txt | wc -l) -gt 0 ]; then exit 1; fi
+  # Syntax
+  - bundle exec rake syntax || exit 1
