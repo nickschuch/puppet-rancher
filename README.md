@@ -1,6 +1,8 @@
 Puppet - Rancher
 ================
 
+[![Build Status](https://travis-ci.org/nickschuch/puppet-rancher.svg?branch=master)](https://travis-ci.org/nickschuch/puppet-rancher)
+
 ## Overview
 
 A manifest with the goal of aiding setup of the Rancher projects.
