@@ -1,9 +1,9 @@
 # Management Server.
 
 class rancher::management {
+  require ::docker
 
   docker::image { 'rancher/server':
-    require => Package['docker'],
   }
 
   docker::run { 'rancher_server':
