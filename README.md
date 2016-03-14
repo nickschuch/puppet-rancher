@@ -25,7 +25,8 @@ Docker Node
 
 ```
 rancher::node { 'example_node':
-  management => 'localhost',
+  management => '10.0.1.2',
+  registration_token => '5074AF5E431560691B8F1457978400000:UZRKUYcESSHKpOTERoOPPor7QY',
 }
 ```
 
