@@ -8,9 +8,9 @@ class rancher::node (
   validate_string($management)
   validate_string($registration_token)
 
+  require ::docker
 
   docker::image { 'rancher/agent':
-    require => Package['docker'],
   }
 
   docker::run { 'rancher_node':
