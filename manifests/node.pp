@@ -1,7 +1,7 @@
 # Register Docker Node.
 class rancher::node (
-  $management = undef,
-  $registration_token = undef,
+  $management,
+  $registration_token,
   $rancher_master_port = 8080,
 ) {
 
