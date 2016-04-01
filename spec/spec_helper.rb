@@ -12,8 +12,11 @@ RSpec.configure do |c|
 
   c.default_facts = {
     :osfamily                  => 'RedHat',
+    :operatingsystem           => 'CentOS',
     :operatingsystemrelease    => '7.2',
     :operatingsystemmajrelease => '7',
+    :kernelversion             => '3.10.0',
+    :kernelrelease             => '3.10.0-327.el7.x86_64',
   }
 
   # add these two lines in a single test block to enable puppet and hiera debug mode
