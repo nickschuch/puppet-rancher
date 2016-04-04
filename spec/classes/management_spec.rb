@@ -6,7 +6,7 @@ describe 'rancher::management' do
   }}
   it {
     is_expected.to contain_docker__image('rancher/server')
-    is_expected.to contain_docker__run('rancher_server').with({
+    is_expected.to contain_docker__run('rancher/server').with({
       'image'   => 'rancher/server',
       'ports'   => ['8080:8080'],
       'require' => 'Docker::Image[rancher/server]'

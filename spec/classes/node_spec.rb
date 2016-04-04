@@ -8,7 +8,7 @@ describe 'rancher::node' do
     }}
     it {
       is_expected.to contain_docker__image('rancher/agent')
-      is_expected.to contain_docker__run('rancher_node').with({
+      is_expected.to contain_docker__run('rancher/node').with({
         'image'   => 'rancher/agent',
         'command' => 'http://10.0.1.1:8080/v1/scripts/DB121CFBA836F9493653:1434085200000:2ZOwUMd6fIzz44efikGhBP1veo',
         'volumes' => [

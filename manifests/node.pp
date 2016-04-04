@@ -4,16 +4,15 @@ class rancher::node (
   $registration_token,
   $rancher_master_port = 8080,
 ) {
-
   validate_string($management)
   validate_string($registration_token)
 
-  require ::docker
+  require docker
 
   docker::image { 'rancher/agent':
   }
 
-  docker::run { 'rancher_node':
+  docker::run { 'rancher/node':
     image      => 'rancher/agent',
     privileged => true,
     command    => "http://${management}:${rancher_master_port}/v1/scripts/${registration_token}",
@@ -23,5 +22,4 @@ class rancher::node (
     ],
     require    => Docker::Image['rancher/agent'],
   }
-
 }
