@@ -9,6 +9,10 @@ A manifest with the goal of aiding setup of the Rancher projects.
 
 https://github.com/rancherio/rancher
 
+## Puppet Forge
+
+https://forge.puppetlabs.com/nick/rancher
+
 ## Demo manifest
 
 https://github.com/nickschuch/puppet-rancher-demo

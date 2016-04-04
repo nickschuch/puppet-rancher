@@ -1,5 +1,5 @@
 {
-  "name": "nickschuch-rancher",
+  "name": "nick-rancher",
   "version": "1.0.0",
   "author": "Nick Schuch",
   "summary": "Deploy Rancher, a container orchestration tool",
