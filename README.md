@@ -34,6 +34,16 @@ rancher::node { 'example_node':
 }
 ```
 
+To add a Docker Node on the Management server
+
+```puppet
+rancher::node { 'manager_node':
+  management         => '10.0.1.2',
+  registration_token => '5074AF5E431560691B8F1457978400000:UZRKUYcESSHKpOTERoOPPor7QY',
+  docker_env         => ["CATTLE_AGENT_IP=${::ipaddress}"]
+}
+```
+
 ## Requirements
 
 We require the following Puppet modules.
