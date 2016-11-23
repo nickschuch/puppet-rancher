@@ -1,6 +1,8 @@
 # Management Server.
 class rancher::management(
-  $rancher_manager_port = '8080',
+  $rancher_manager_port     = '8080',
+  $docker_cleanup_container = true,
+  $docker_cleanup_volume    = false
 ){
   require docker
 
@@ -8,12 +10,12 @@ class rancher::management(
   }
 
   docker::run { 'rancher/server':
-    image   => 'rancher/server',
-    ports   => [ "${rancher_manager_port}:8080" ],
-    require => Docker::Image['rancher/server'],
-    remove_container_on_start => false,
-    remove_volume_on_start    => false,
-    remove_container_on_stop  => false,
-    remove_volume_on_stop     => false,
+    image                     => 'rancher/server',
+    ports                     => ["${rancher_manager_port}:8080"],
+    require                   => Docker::Image['rancher/server'],
+    remove_container_on_start => $docker_cleanup_container,
+    remove_volume_on_start    => $docker_cleanup_volume,
+    remove_container_on_stop  => $docker_cleanup_container,
+    remove_volume_on_stop     => $docker_cleanup_volume,
   }
 }
