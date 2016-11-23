@@ -1,4 +1,5 @@
 Unreleased
+- Can manage Docker cleanup of volumes and container
 - Adding passthru for Docker env
 
 Version 1.0.0
