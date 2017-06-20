@@ -8,8 +8,8 @@ class rancher::management(
   }
 
   docker::run { 'rancher/server':
-    image   => 'rancher/server',
+    image   => 'rancher/server:stable',
     ports   => [ "${rancher_manager_port}:8080" ],
-    require => Docker::Image['rancher/server'],
+    require => Docker::Image['rancher/server:stable'],
   }
 }

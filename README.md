@@ -1,7 +1,7 @@
 Puppet - Rancher
 ================
 
-[![Build Status](https://travis-ci.org/nickschuch/puppet-rancher.svg?branch=master)](https://travis-ci.org/nickschuch/puppet-rancher)
+[![Build Status](https://travis-ci.org/andrewpsp/puppet-rancher.svg?branch=master)](https://travis-ci.org/andrewpsp/puppet-rancher)
 
 ## Overview
 
